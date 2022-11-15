@@ -5,6 +5,7 @@ import org.apache.struts.action.ActionForm;
 public class LoginForm extends ActionForm {
     private String name;
     private String email;
+    private String error;
 
     public String getName() {
         return name;
@@ -20,5 +21,14 @@ public class LoginForm extends ActionForm {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError() {
+        this.error =
+                "<span style='color:red'>Please provide valid entries for both fields</span>";
     }
 }
